@@ -12,7 +12,9 @@ notifyButton.addEventListener("click", () => {
     error.textContent = ``;
   } else if (emailInput.value == "") {
     error.classList.add("active");
+    emailInput.classList.add("active");
     error.textContent = `Please provide an email address`;
+    emailInput.placeholder = "example@email.com";
   } else {
     error.classList.add("active");
     emailInput.classList.add("active");

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -32,6 +34,9 @@ li{
 --Very-Dark-Blue: hsl(209, 33%, 12%);
 }
 
+body{
+    font-family: 'Libre Franklin', sans-serif;
+}
 .whole-container{
     display: flex;
     flex-direction: column;
@@ -48,12 +53,15 @@ header{
 }
 .title h1{
     margin-bottom: .5em;
+    color: var(--Very-Dark-Blue);
 }
 .title p{
     margin-bottom: 1.5em; 
+    color: var(--Very-Dark-Blue);
 }
 .title h1 span{
     color: var(--Gray);
+    font-weight: 300;
 }
 .form-container{
     gap: .7em;
@@ -146,11 +154,15 @@ input[type = email]::placeholder{
     outline: 2px solid var(--Light-Red);
     border: none;
 }
+#emailInput.active::placeholder{
+    color: var(--Very-Dark-Blue);
+    font-weight: 300;
+}
 .thanks.active{
     display: block;
     transition: 2s ease;
 }
-@media (max-width:450px){
+@media (max-width:500px){
     .whole-container{
         width: 80%;
         margin: auto;
@@ -167,6 +179,9 @@ input[type = email]::placeholder{
     .email-only,.form-container button{
         width: 100%;
         text-align: center;
+    }
+    .email-only{
+        margin-bottom: 1em;
     }
     .email-only p{
         margin-left: 0;
