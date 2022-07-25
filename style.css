@@ -21,7 +21,7 @@ li{
 :root{
     /* ### Primary */
 
---Blue: hsl(223, 87%, 63%);
+--Blue: rgb(79, 125, 243);
 --Green: rgba(15, 153, 15, 0.9);
 
     /* ### Secondary */
@@ -135,14 +135,32 @@ input[type = email]::placeholder{
 ul{
     gap: 1em;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin-bottom: 2em;
 }
-li img{
-    width: 2em;
-    cursor: pointer;
-    border: 2px solid var(--Blue);
+li{
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
+    border: 2px solid var(--Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+li:hover{
+    background-color: var(--Blue);
+    transition: .5s ease;
+}
+li img{
+    width: 1.5em;
+    margin-top: .25em;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(42%) sepia(58%) saturate(2312%) hue-rotate(208deg) brightness(99%) contrast(93%);
+}
+li img:hover{
+    filter: brightness(0) saturate(100%) invert(86%) sepia(96%) saturate(0%) hue-rotate(9deg) brightness(105%) contrast(107%);
 }
 .copyright{
     color: var(--Gray);
