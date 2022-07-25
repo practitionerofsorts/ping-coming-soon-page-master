@@ -63,10 +63,19 @@ header{
     align-items: center;
     justify-content: center;
 }
+.email-only{
+    gap: .5em;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+.email-only p{
+    margin-left: 20px;
+}
 input[type = email]{
     padding: .9em 2em;
-    border: 1px solid var(--Pale-Blue);
     border-radius: 3em;
+    border: 1px solid var(--Pale-Blue);
 }
 input[type = email]::placeholder{
     color: var(--Pale-Blue);
@@ -81,12 +90,34 @@ input[type = email]::placeholder{
     border-radius: 3em;
     padding: .9em 2.5em;
     cursor: pointer;
+    width: 170px;
     color: white;
     background-color: var(--Blue);
     align-self: flex-start;
 }
 .form-container button:hover{
     opacity: .8;
+}
+.thanks{
+    padding: 2em;
+    display: none;
+    text-align: center;
+    color: white;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    transition: .5s ease-in;
+    background-color: var(--Very-Dark-Blue);
+}
+#ok{
+    padding: .5em 1em;
+    margin-top: 1em;
+    width: 100%;
+    border: 1px solid var(--Very-Dark-Blue);
+    background-color: var(--Blue);
+    color: white;
+}
+#emailValue{
+    color: var(--Light-Red);
 }
 .dashboard-image{
     width: 535px;
@@ -111,8 +142,13 @@ input[type = email]::placeholder{
 .error.active{
     display: block;
 }
-input[type = email].active{
+#emailInput.active{
     outline: 2px solid var(--Light-Red);
+    border: none;
+}
+.thanks.active{
+    display: block;
+    transition: 2s ease;
 }
 @media (max-width:450px){
     .whole-container{
@@ -128,16 +164,12 @@ input[type = email].active{
         flex-direction: column;
         justify-content: center;
     }
-    .email-only{
-        gap: .5em;
+    .email-only,.form-container button{
         width: 100%;
-        display: flex;
         text-align: center;
-        margin-bottom: 1em;
-        flex-direction: column;
     }
-    .form-container button{
-        width: 100%;
+    .email-only p{
+        margin-left: 0;
     }
     .dashboard-image{
         max-width: 335px;
