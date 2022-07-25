@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 16px; text-align: center; }
+.attribution a { color: var(--Very-Dark-Blue) }
 
 html{
     box-sizing: border-box;
@@ -54,10 +54,12 @@ header{
 }
 .title h1{
     margin-bottom: .5em;
+    font-size: 3em;
     color: var(--Very-Dark-Blue);
 }
 .title p{
     margin-bottom: 1.5em; 
+    font-size: 1.2em;
     color: var(--Very-Dark-Blue);
 }
 .title h1 span{
