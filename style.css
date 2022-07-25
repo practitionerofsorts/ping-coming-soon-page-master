@@ -22,6 +22,7 @@ li{
     /* ### Primary */
 
 --Blue: hsl(223, 87%, 63%);
+--Green: rgba(15, 153, 15, 0.9);
 
     /* ### Secondary */
 
@@ -125,7 +126,7 @@ input[type = email]::placeholder{
     color: white;
 }
 #emailValue{
-    color: var(--Light-Red);
+    color: var(--Green);
 }
 .dashboard-image{
     width: 535px;
@@ -152,6 +153,10 @@ input[type = email]::placeholder{
 }
 #emailInput.active{
     outline: 2px solid var(--Light-Red);
+    border: none;
+}
+#emailInput.correct{
+    outline: 2px solid var(--Green);
     border: none;
 }
 #emailInput.active::placeholder{

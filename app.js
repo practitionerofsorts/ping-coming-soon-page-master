@@ -7,10 +7,14 @@ const okButton = document.querySelector("#ok");
 const thanksSection = document.querySelector(".thanks");
 
 notifyButton.addEventListener("click", () => {
+  // check if the email matches a standard email
   if (emailInput.value.match(test)) {
     error.classList.add("active");
+    emailInput.classList.add("correct");
     error.textContent = ``;
-  } else if (emailInput.value == "") {
+  }
+  // checks if the email has an actual value
+  else if (emailInput.value == "") {
     error.classList.add("active");
     emailInput.classList.add("active");
     error.textContent = `Please provide an email address`;
@@ -21,6 +25,7 @@ notifyButton.addEventListener("click", () => {
     error.textContent = `Please provide a valid email address`;
   }
 
+  // when the email is correctly inputed
   if (emailInput.value.match(test)) {
     thanksSection.classList.add("active");
     emailValue.innerHTML = emailInput.value;
