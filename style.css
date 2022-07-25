@@ -132,17 +132,17 @@ input[type = email]::placeholder{
     width: 535px;
     margin-bottom: 8em;
 }
-.social-media-icons{
+ul{
     gap: 1em;
-    display: grid;
+    display: flex;
+    flex-direction: row;
     margin-bottom: 2em;
-    place-content: center;
-    background-color: black;
-    grid-template-columns: auto auto auto;
 }
-.social-media-icons img{
+li img{
     width: 2em;
     cursor: pointer;
+    border: 2px solid var(--Blue);
+    border-radius: 50%;
 }
 .copyright{
     color: var(--Gray);
